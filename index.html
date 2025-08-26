@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="isotipotransparente.png">
+    <title>CodeNova</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- HERO SECTION -->
+<section class="hero fade-section" id="inicio">
+  <div class="video-bg">
+    <video autoplay muted loop playsinline poster="fondolineas.mp4" id="hero-video">
+      <source src="fondohero.mp4" type="video/webm">
+    </video>
+  </div>
+      <div class="hero-text">
+        <p class="hero-intro">
+          ¿Tenés una idea de negocio? Nosotros la volvemos web.
+        </p>
+        <h1>
+          Del código,<br>
+          nace la <span class="resaltado type-js" id="typeword">innovación.</span>
+        </h1>
+        <p class="subtitle">
+          Creamos soluciones que impulsan tu marca.
+        </p>
+        <a href="#contacto" class="cta-btn">+info</a>
+      </div>
+      <a href="/" class="hero-logo-signature">
+        <img src="logotipotrasnparente.png" alt="CodeNova logo" />
+      </a>
+</section>
+
+<!--SECCION 2 PORQUE DEBERIAS TRABAJAR CON NOSOTROS-->
+<section class="seccion-valor fade-section" data-align="center">
+  <!-- Títulos -->
+  <div class="titulo-valor">
+    <h2>¿Por qué deberíamos trabajar juntos?</h2>
+    <h3>Sabemos entender tu empresa y a tus clientes</h3>
+    <p>Tu negocio es único, y tu web también debería serlo. Investigamos a fondo tu mercado para comprender sus necesidades, deseos y motivaciones, creando un diseño que conecte con tu público a un nivel emocional.</p>
+  </div>
+
+  <!-- Tarjeta -->
+  <div class="card-valor">
+    <div class="contenedor-valor">
+      <!-- Lista de 6 links -->
+      <nav class="links-valor" aria-label="Servicios">
+        <button class="item-link active"
+                data-img="div1.png"
+                data-title="Presencia profesional • SEO base • Rendimiento alto"
+                data-desc="Un sitio bien hecho posiciona mejor, carga rápido y te muestra confiable. Te encuentran, te eligen.">
+          <span>Más visibilidad, más clientes</span>
+          <svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <button class="item-link"
+                data-img="div2.png"
+                data-title="Google Ads/GA4 • Píxeles • Dashboards"
+                data-desc="Campañas en Google & redes. Segmentación, copies y creatividades.">
+          <span>Marketing que mide</span>
+          <svg class="flecha" viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <button class="item-link"
+                data-img="div3.png"
+                data-title="Responsive • UX clara • Código limpio"
+                data-desc="Diseño que guía a la acción. Código mantenible y escalable.">
+          <span>Diseño & Desarrollo web</span>
+          <svg class="flecha" viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <button class="item-link"
+                data-img="div4.png"
+                data-title="Arquitectura • Metadatos • Core Web Vitals"
+                data-desc="Mejor base técnica = mejor posición y menos rebote.">
+          <span>SEO & Performance</span>
+          <svg class="flecha" viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <button class="item-link"
+                data-img="div5.png"
+                data-title="Catálogo • Checkout seguro • Integraciones"
+                data-desc="Vendé online con carrito optimizado y métricas de conversión.">
+          <span>Soluciones e-commerce</span>
+          <svg class="flecha" viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <button class="item-link"
+                data-img="div6.png"
+                data-title="Backups • Actualizaciones • Mejoras"
+                data-desc="No te dejo solo. Mantenimiento y optimización post-lanzamiento.">
+          <span>Soporte Continuo</span>
+          <svg class="flecha" viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
+
+      <!-- Visor -->
+      <div class="viewer">
+        <div class="image-wrap" tabindex="0" aria-describedby="pv-desc">
+          <img id="pv-img" src="imagencodigo.jpg" alt="Vista previa del servicio" />
+          <div class="overlay" id="pv-desc">
+            <h4 id="pv-title">Diseño & Desarrollo Web</h4>
+            <p id="pv-text">Sitios rápidos, responsive y pensados para convertir.</p>
+            <a href="#contacto" class="overlay-cta">Pedir presupuesto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carrusel de herramientas -->
+<div class="tools-carousel" aria-label="Herramientas que usamos">
+  <div class="tools-track">
+    <!-- Set 1 -->
+    <a class="tool" href="#" aria-label="HTML">
+      <img src="logohtml.webp" alt="HTML"><span>HTML</span>
+    </a>
+    <a class="tool" href="#" aria-label="CSS">
+      <img src="logocss.png" alt="CSS"><span>CSS</span>
+    </a>
+    <a class="tool" href="#" aria-label="JavaScript">
+      <img src="logojs.png" alt="JavaScript"><span>JavaScript</span>
+    </a>
+    <a class="tool" href="#" aria-label="GitHub">
+      <img src="logogithub.png" alt="GitHub"><span>GitHub</span>
+    </a>
+    <a class="tool" href="#" aria-label="WordPress">
+      <img src="logowordpress.png" alt="WordPress"><span>WordPress</span>
+    </a>
+    <a class="tool" href="#" aria-label="Framer">
+      <img src="logoframer.png" alt="Framer"><span>Framer</span>
+    </a>
+
+    <!-- Set 2 (duplicado para loop perfecto) -->
+    <a class="tool" href="#" aria-label="HTML">
+      <img src="logohtml.webp" alt="HTML"><span>HTML</span>
+    </a>
+    <a class="tool" href="#" aria-label="CSS">
+      <img src="logocss.png" alt="CSS"><span>CSS</span>
+    </a>
+    <a class="tool" href="#" aria-label="JavaScript">
+      <img src="logojs.png" alt="JavaScript"><span>JavaScript</span>
+    </a>
+    <a class="tool" href="#" aria-label="GitHub">
+      <img src="logogithub.png" alt="GitHub"><span>GitHub</span>
+    </a>
+    <a class="tool" href="#" aria-label="WordPress">
+      <img src="logowordpress.png" alt="WordPress"><span>WordPress</span>
+    </a>
+    <a class="tool" href="#" aria-label="Framer">
+      <img src="logoframer.png" alt="Framer"><span>Framer</span>
+    </a>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- SECCION QUE PODEMOS CONTRUIR PARA VOS -->
+<section class="edu-cards fade-section" aria-label="Explicación de bases para el desarrollo web">
+  
+  <div class="edu-container">
+    <h2 class="edu-title">Qué podemos construir para vos</h2>
+    <p class="edu-subtitle">
+      Elegimos la solución que mejor encaja con tus objetivos y presupuesto. Todo medible, escalable y fácil de usar.
+    </p>
+
+    <!-- Card 1: ¿Qué es una API? (entra desde la izquierda) -->
+    <div class="edu-card big slide-left"  data-delay="0"   style="--bg:url('imagencodigo.jpg')">
+      <div class="edu-card-left">
+        <div class="edu-icon" aria-hidden="true">
+          <img src="1.png" alt="">
+        </div>
+        <div class="edu-text">
+          <h3>Sitios Web Administrables</h3>
+          <p class="small-label">CMS a medida • Roles/usuarios • Medición integrada</p>
+          <p class="desc">
+            Actualizá banners, productos, precios y textos desde un panel simple. Sin depender de terceros.
+          </p>
+        </div>
+      </div>
+      <div class="edu-card-right">
+        <a href="#contacto" class="edu-btn" aria-label="Ver ejemplos">Ver ejemplos</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Diseño y estructura (entra desde la derecha) -->
+    <div class="edu-card big slide-right" data-delay="120" style="--bg:url('diseño.jpg')">
+      <div class="edu-card-left">
+        <div class="edu-icon" aria-hidden="true">
+          <img src="2.png" alt="">
+        </div>
+        <div class="edu-text">
+          <h3>Soluciones de E-commerce</h3>
+          <p class="small-label">Checkout optimizado • Integración con Analytics/Ads • Email post-compra</p>
+          <p class="desc">
+            Tienda online lista para vender: catálogo, variantes, pasarela de pago y envíos.
+          </p>
+        </div>
+      </div>
+      <div class="edu-card-right">
+        <a href="#contacto" class="edu-btn" aria-label="Ver cómo trabajamos diseño y estructura">Quiero vender online</a>
+      </div>
+    </div>
+
+    <!-- Card 3: Medición & Optimización (entra desde la izquierda) -->
+    <div class="edu-card big slide-left"  data-delay="240" style="--bg:url('dataanalytics.jpg')">
+      <div class="edu-card-left">
+        <div class="edu-icon" aria-hidden="true">
+          <img src="3.png" alt="">
+        </div>
+        <div class="edu-text">
+          <h3>Medición & Optimización</h3>
+          <p class="small-label">Datos que mandan</p>
+          <p class="desc">
+            Con Google Analytics y seguimiento real, vemos qué funciona y qué no. Ajustamos en base a datos para que tu web
+            mejore su rendimiento con el tiempo, no quede estancada.
+          </p>
+        </div>
+      </div>
+      
+      <div class="edu-card-right">
+        <a href="#contacto" class="edu-btn" aria-label="Solicitar optimización y medición">Ver como</a>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!--Seccion PROCESOS DE TRABAJO-->
+
+<!--PRUEBASSSSSSSSSSSSSSSSSSSSSS-->
+<section class="container-grilla fade-section" data-align="center">
+    <div class="titulo-grilla">
+    <h2>Tu web, construida paso a paso</h2>
+    <p>Cada fase está pensada para que entiendas cómo avanzamos, qué aportás vos y qué hacemos nosotros, hasta lograr un resultado que represente a tu marca.</p>
+  </div>
+  </div>
+        <div class="container">
+            <div class="slide">
+                <div class="item"
+                    style="background-image: url(imagenresultados.jpg);">
+                    <div class="content">
+                        <div class="name">DE IDEAS A RESULTADOS TANGIBLES</div>
+                        <div class="des">Así creamos webs que transforman negocios</div>
+                        <button>+info</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(imagenreunion.jpg);">
+                    <div class="content">
+                        <div class="name">1. Te escuchamos</div>
+                        <div class="des">Entendemos tu proyecto, tu audiencia y tus objetivos. Preguntamos para saber qué necesitás.</div>
+                        <button>+info</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(imagenanalisis.jpg);">
+                    <div class="content">
+                        <div class="name">2. Investigamos a fondo</div>
+                        <div class="des">Analizamos competencia, mercado y oportunidades para que tu web no solo se vea bien, sino que convierta.</div>
+                        <button>+info</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(imagenmundocodigo.jpg);">
+                    <div class="content">
+                        <div class="name">3. Estructuramos tu éxito</div>
+                        <div class="des">Diseñamos la arquitectura, flujo y contenido para que cada visita tenga un camino claro hacia la conversión.</div>
+                        <button>+info</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(vision.jpg);">
+                    <div class="content">
+                        <div class="name">4. Co-creamos tu visión</div>
+                        <div class="des">Trabajamos junto a vos para afinar detalles, iterar y dejar todo listo para el lanzamiento.</div>
+                        <button>+info</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(imagencodigo.jpg);">
+                    <div class="content">
+                        <div class="name">5. Ponemos tu código en marcha</div>
+                        <div class="des">Publicamos, medimos y ajustamos. No te dejamos solo: optimizamos con datos reales.</div>
+                        <button>+info</button>
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(dataanalytics.jpg);">
+                    <div class="content">
+                        <div class="name">6. Lanzamiento & seguimiento</div>
+                        <div class="des">Tu sitio crece con vos: nuevas páginas, campañas y mejoras sin fricciones.</div>
+                        <button>+info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="prev"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+</section>
+
+
+<!-- ====================== -->
+<!-- SECCIÓN PAQUETES -->
+<!-- ====================== -->
+<section class="paquetes fade-section" id="paquetes">
+  <div class="paquetes-intro">
+    <h2>Soluciones web hechas a tu medida</h2>
+    <p>
+      Todos nuestros sitios son llave en mano, sin comisiones ocultas y con 
+      un año de hosting y dominio GRATIS. Elegí el plan que mejor se adapte a tu proyecto.
+    </p>
+  </div>
+
+  <div class="paquetes-grid">
+    <!-- PLAN 1 -->
+    <article class="paquete-card">
+      <div class="paquete-img">
+        <img src="mockupnotebookservices.avif" alt="Landing Page de Alta Conversión">
+      </div>
+      <div class="paquete-content">
+        <h3>Landing Page de Alta Conversión</h3>
+        <p>Una sección ultrafocalizada cuyo único objetivo es convertir visitas en ventas.</p>
+        <p><strong>Ideal para:</strong> campañas, lanzamientos y ventas puntuales.</p>
+        <a href="#contacto" class="paquete-btn">Cotizá ahora →</a>
+        <ul class="paquete-features">
+          <li>Optimizada para conversión</li>
+          <li>Formulario de contacto</li>
+          <li>Botón de WhatsApp</li>
+          <li>SEO On-Page básico</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- PLAN 2 DESTACADO -->
+    <article class="paquete-card destacado">
+      <div class="paquete-img">
+        <img src="mockupnotebookservices.avif" alt="Web Corporativa Profesional">
+      </div>
+      <div class="paquete-content">
+        <h3>Web Corporativa Profesional</h3>
+        <p>Hasta 10 páginas estratégicas que reflejen la identidad y autoridad de tu marca.</p>
+        <p><strong>Ideal para:</strong> empresas que quieren destacar frente a la competencia.</p>
+        <a href="#contacto" class="paquete-btn">Cotizá ahora →</a>
+        <ul class="paquete-features">
+          <li>Diseño responsive</li>
+          <li>Escalabilidad sin límites</li>
+          <li>Correos corporativos</li>
+          <li>Indexación en Google & Bing</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- PLAN 3 -->
+    <article class="paquete-card">
+      <div class="paquete-img">
+        <img src="mockupnotebookservices.avif" alt="Tienda Online Optimizada">
+      </div>
+      <div class="paquete-content">
+        <h3>Tienda Online Optimizada</h3>
+        <p>Ecommerce rápido y seguro, con carrito de compras y pasarelas integradas.</p>
+        <p><strong>Ideal para:</strong> marcas que quieren vender 24/7.</p>
+        <a href="#contacto" class="paquete-btn">Cotizá ahora →</a>
+        <ul class="paquete-features">
+          <li>Catálogo de productos</li>
+          <li>Pasarela de pago</li>
+          <li>Gestión de envíos</li>
+          <li>SSL gratis</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer id="contacto" class="site-footer">
+  <div class="footer-content">
+    <!-- 1) Logo -->
+    <div class="footer-logo">
+      <img src="logotipotrasnparente.png" alt="CodeNova Logo">
+        <div class="footer-contact">
+          <a href="mailto:tuemail@ejemplo.com" class="footer-email">📧 tuemail@ejemplo.com</a>
+          <a href="https://wa.me/+5491124677663" target="_blank" rel="noopener" class="footer-whatsapp">
+            💬 WhatsApp
+          </a>
+        </div>
+    </div>
+
+    <!-- 2) Servicios footer -->
+    <div class="footer-links">
+      <h3>Servicios</h3>
+      <ul>
+        <li><a href="conoce-como-trabajamos.html">Programación y diseño web</a></li>
+        <li><a href="servicios.html">Armado y reparación de PC</a></li>
+        <li><a href="portfolio.html">Marketing Digital ConectAds</a></li>
+        <!-- agrega más según necesites -->
+      </ul>
+    </div>
+    <!-- 3) Links útiles -->
+    <div class="footer-links">
+      <h3>Links útiles</h3>
+      <ul>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="conoce-como-trabajamos.html">Conoce cómo trabajamos</a></li>
+        <!-- agrega más según necesites -->
+      </ul>
+    </div>
+
+    <!-- 4) Google Maps (placeholder) -->
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=TU_EMBED_ID"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 <strong>CodeNova</strong>. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante con icono PNG -->
+<a href="https://wa.me/5491124677663" class="whatsapp-float" target="_blank" aria-label="Escribinos por WhatsApp">
+  <img src="whatsapp.png" alt="WhatsApp">
+</a>
+
+
+
+<!--Scrip slide proceso q necesitas saber-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(".slide-left, .slide-right"); // tus cards
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      const delay = parseInt(el.dataset.delay || 0, 10);
+
+      if (entry.isIntersecting) {
+        // entra → animar
+        el.style.transitionDelay = `${delay}ms`;
+        el.classList.add("in-view");
+      } else {
+        // sale → resetear para que vuelva a animar después
+        el.classList.remove("in-view");
+        el.style.transitionDelay = "0ms";
+
+        // Si tu slide usa *keyframes* en vez de *transitions*, forzá reinicio:
+        el.style.animation = "none";
+        void el.offsetHeight; // reflow
+        el.style.animation = "";
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: "0px 0px -12% 0px",
+    threshold: 0.18
+  });
+
+  targets.forEach(el => io.observe(el));
+});
+</script>
+
+
+<!--SCRIPT PRUEBASSSSSSSSSSSSSSSSSSSSSS-->
+<script>
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+document.querySelectorAll('.slide .item').forEach(item => {
+  item.addEventListener('click', () => {
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+  })
+})
+</script>
+
+<!--SCRIPT ANIMACIONES GENERALES-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(".fade-section");
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // entra a la vista → animar
+        entry.target.classList.add("fade-in");
+      } else {
+        // sale de la vista → resetear para re-animar
+        entry.target.classList.remove("fade-in");
+      }
+    });
+  }, {
+    root: null,
+    // activa un toque antes y después; ajustá si querés
+    rootMargin: "-20% 0px -20% 0px",
+    threshold: 0.15
+  });
+
+  targets.forEach(el => io.observe(el));
+  
+});
+</script>
+
+<!--Script para palabra "innovacion" en el hero -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('typeword');
+
+  class Scrambler {
+    constructor(el){
+      this.el = el;
+      this.frame = 0;
+      this.queue = [];
+      this.chars = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz0123456789!#%&?";      
+      this.update = this.update.bind(this);
+    }
+    randomChar(){ return this.chars[Math.floor(Math.random()*this.chars.length)] }
+    setText(newText){
+      const oldText = this.el.textContent;
+      const len = Math.max(oldText.length, newText.length);
+      this.queue = [];
+      for (let i = 0; i < len; i++){
+        const from = oldText[i] || "";
+        const to   = newText[i] || "";
+        const start = Math.floor(Math.random()*15);             // arranque escalonado
+        const end   = start + Math.floor(10 + Math.random()*20); // duración por letra
+        this.queue.push({from, to, start, end, char:""});
+      }
+      cancelAnimationFrame(this.raf);
+      this.frame = 0;
+      return new Promise(res => { this.resolve = res; this.update(); });
+    }
+    update(){
+      let out = "", done = 0;
+      for (let i = 0; i < this.queue.length; i++){
+        let q = this.queue[i];
+        if (this.frame >= q.end){
+          done++; out += q.to;
+        } else if (this.frame >= q.start){
+          if (!q.char || Math.random() < 0.28) q.char = this.randomChar();
+          out += q.char;
+        } else {
+          out += q.from;
+        }
+      }
+      this.el.textContent = out;
+      this.frame++;
+      if (done === this.queue.length){
+        this.resolve && this.resolve();
+      } else {
+        this.raf = requestAnimationFrame(this.update);
+      }
+    }
+  }
+
+  const fx = new Scrambler(el);
+  const target = 'innovación.';
+  const rand = n => Array.from({length:n}, () => fx.randomChar()).join('');
+
+  (async function loop(){
+    while(true){
+      // baraja letras y “revela” la palabra
+      await fx.setText(rand(target.length));
+      await fx.setText(target);
+      await new Promise(r => setTimeout(r, 1200));  // pausa mostrando la palabra
+    }
+  })();
+});
+</script>
+
+<!--Script para scroll por section con js estricto-->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = [...document.querySelectorAll('.fade-section')];
+  let idx = 0, busy = false;
+
+  // Detecta sección visible para mantener idx al día
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) idx = sections.indexOf(e.target); });
+  }, { threshold: 0.6 });
+  sections.forEach(s => io.observe(s));
+
+  // Si tenés header fijo, lo toma (sino 0)
+  const HEADER = document.querySelector('.site-header')?.offsetHeight || 0;
+
+  function scrollToSection(section) {
+    // Soporta data-align="center" y también tu data-aling="center"
+    const align = section.dataset.align || section.dataset.aling || 'start';
+
+    if (align === 'center') {
+      // Centrado nativo
+      section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    } else {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  const go = (i) => {
+    if (busy) return;
+    idx = Math.max(0, Math.min(i, sections.length - 1));
+    busy = true;
+    scrollToSection(sections[idx]);
+    setTimeout(() => busy = false, 1300); // duración aprox del smooth
+  };
+
+  // Ignorar rueda dentro de contenedores con scroll propio
+  const isInsideScrollable = (el) => {
+    const box = el.closest('.can-scroll');
+    return box && box.scrollHeight > box.clientHeight;
+  };
+
+  window.addEventListener('wheel', (e) => {
+    if (isInsideScrollable(e.target)) return;
+
+    const atFirst = idx === 0;
+    const atLast  = idx === sections.length - 1;
+
+    // Deja pasar al footer cuando estás en la última
+    if (atLast && e.deltaY > 0) return;
+    // (Opcional) deja pasar por arriba del hero
+    if (atFirst && e.deltaY < 0) return;
+
+    e.preventDefault();
+    go(idx + (e.deltaY > 0 ? 1 : -1));
+  }, { passive: false });
+
+  // Teclado (igual que antes)
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); go(idx + 1); }
+    if (e.key === 'ArrowUp'   || e.key === 'PageUp')   { e.preventDefault(); go(idx - 1); }
+    if (e.key === 'Home') { e.preventDefault(); go(0); }
+    if (e.key === 'End')  { e.preventDefault(); go(sections.length - 1); }
+  });
+
+  // Touch para mobile
+  let startY = 0;
+  window.addEventListener('touchstart', (e) => { startY = e.touches[0].clientY; }, { passive: true });
+  window.addEventListener('touchend', (e) => {
+    const dy = startY - e.changedTouches[0].clientY;
+    if (Math.abs(dy) > 40) go(idx + (dy > 0 ? 1 : -1));
+  }, { passive: true });
+});
+</script>
+
+<!--SECCION 2-->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.item-link');
+  const img = document.getElementById('pv-img');
+  const title = document.getElementById('pv-title');
+  const text  = document.getElementById('pv-text');
+  const imageWrap = img.closest('.image-wrap');
+
+  function select(btn){
+    // activo visual
+    buttons.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // datos
+    const src   = btn.dataset.img;
+    const t     = btn.dataset.title || '';
+    const d     = btn.dataset.desc  || '';
+
+    // crossfade seguro (preload)
+    img.classList.add('fading');
+    const pre = new Image();
+    pre.onload = () => {
+      img.src = src;
+      title.textContent = t;
+      text.textContent  = d;
+      requestAnimationFrame(()=> img.classList.remove('fading'));
+    };
+    pre.src = src;
+  }
+
+  // click/enter
+  buttons.forEach(b=>{
+    b.addEventListener('click', ()=> select(b));
+    b.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); select(b); }});
+  });
+
+  // mobile: tocar la imagen para mostrar/ocultar overlay
+  imageWrap.addEventListener('click', ()=>{
+    imageWrap.classList.toggle('show-overlay');
+  }, {passive:true});
+});
+</script>
+
+
+
+</body>
+</html>
