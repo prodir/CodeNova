@@ -1010,7 +1010,7 @@ font-family: "Aldrich", sans-serif;
    ============================== */
 @media (max-width: 1024px){
     .hero{
-    min-height: 75svh;                 /* alto real en móviles/ Safari */
+    min-height: 100svh;                 /* alto real en móviles/ Safari */
     padding: 12vh 4vw 6vh;
   }
   .hero-text{
@@ -1033,7 +1033,7 @@ font-family: "Aldrich", sans-serif;
     font-size: 1.1rem;
   }
   .hero-logo-signature img{
-    height: 10rem;
+    height: 15rem;
   }
 
   /* Tipografía un toque más contenida */
@@ -1096,11 +1096,8 @@ font-family: "Aldrich", sans-serif;
   .content .name{ font-size: clamp(1.2rem, 3.6vw, 2rem); }
 
   /* Botón de WhatsApp flotante */
-  .whatsapp-float{
-    width: 56px; height: 56px; line-height: 56px; font-size: 28px;
-    bottom: 18px; right: 18px;
-  }
-  .whatsapp-float img{ width: 30px; height: 30px; }
+
+  .whatsapp-float img{ width: 530px; height: 530px; }
 }
 
 
@@ -1109,7 +1106,7 @@ font-family: "Aldrich", sans-serif;
    ============================== */
 @media (max-width: 680px){
  .hero {
-    padding: 17vh 1.5rem 5vh; /* más respiro arriba y costados */
+    padding: 17vh 1.5rem 18vh; /* más respiro arriba y costados */
     align-items: flex-start;
     text-align: left;
   }
