@@ -999,9 +999,24 @@ font-family: "Aldrich", sans-serif;
   transform: scale(1.1);
   box-shadow: 0 6px 14px rgba(0,0,0,.4);
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: 999;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 
 .whatsapp-float img {
-  width: 400px; height: 400px;
+  width: 80px; height: 80px;
   object-fit: contain;
 }
 
