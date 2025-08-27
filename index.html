@@ -18,8 +18,8 @@
     <!-- HERO SECTION -->
 <section class="hero fade-section" id="inicio">
   <div class="video-bg">
-    <video autoplay muted loop playsinline poster="fondolineas.mp4" id="hero-video">
-      <source src="fondohero.mp4" type="video/webm">
+    <video autoplay muted loop playsinline id="hero-video">
+      <source src="fondohero.mp4" type="video/mp4">
     </video>
   </div>
       <div class="hero-text">
@@ -600,6 +600,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!--Script para scroll por section con js estricto-->
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Solo activar el scroll por sección si es desktop
+  if (window.innerWidth > 1024) {
+    const sections = [...document.querySelectorAll('.fade-section')];
+    let idx = 0, busy = false;
+
 document.addEventListener('DOMContentLoaded', () => {
   const sections = [...document.querySelectorAll('.fade-section')];
   let idx = 0, busy = false;
