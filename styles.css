@@ -1112,7 +1112,7 @@ font-family: "Aldrich", sans-serif;
 
   /* Botón de WhatsApp flotante */
 
-  .whatsapp-float img{ width: 530px; height: 530px; }
+  .whatsapp-float img{ width: 80px; }
 }
 
 
@@ -1259,5 +1259,5 @@ font-family: "Aldrich", sans-serif;
     width: 52px; height: 52px; line-height: 52px; font-size: 26px;
     bottom: 14px; right: 14px;
   }
-  .whatsapp-float img{ width: 350px; height: 350px; }
+  .whatsapp-float img{ width: 60px; height: 60px; }
 }
