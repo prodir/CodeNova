@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | CodeNova</title>
+  <meta name="description" content="Proyectos y casos de estudio de CodeNova: sitios web, e-commerce, landing pages y marketing digital." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Si ya cargás fuentes en tu CSS, podés omitir esto -->
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ====== ESTILOS ESPECÍFICOS DEL PORTFOLIO (puedes moverlos a styles.css) ====== */
+    :root{
+      /* fallback por si no están definidas en tu CSS global */
+      --negro:#0f0f10; --gris-oscuro:#17181a; --gris-claro:#c1c4d6; --blanco:#fff;
+      --naranja:#ff6a00; --accent:#E8CA84;
+    }
+    body{ background: var(--negro); color: var(--blanco); font-family: "Inter", system-ui, sans-serif; }
+
+    .portfolio{
+      padding: clamp(2.2rem, 5vw, 4rem) 5vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .portfolio-hero{
+      margin-bottom: 2rem;
+    }
+    .portfolio-hero h1{
+      font-family: "Aldrich", sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      color: var(--accent);
+      margin: 0 0 .6rem;
+    }
+    .portfolio-hero p{
+      color: var(--gris-claro);
+      max-width: 70ch;
+      line-height: 1.5;
+    }
+
+    /* Grid de proyectos */
+    .projects-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1.2rem;
+    }
+    @media (max-width: 1024px){
+      .projects-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 640px){
+      .projects-grid{ grid-template-columns: 1fr; }
+    }
+
+    .project-card{
+      background: var(--gris-oscuro);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+      transition: transform .18s ease, box-shadow .25s ease;
+      isolation: isolate;
+    }
+    .project-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0,0,0,.32);
+    }
+
+    .project-media{
+      position: relative;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #0b0b0b;
+    }
+    .project-media img, .project-media video{
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .5s ease, opacity .35s ease;
+    }
+    .project-card:hover .project-media img,
+    .project-card:hover .project-media video{ transform: scale(1.03); }
+
+    .project-body{
+      padding: 1rem 1rem 1.1rem;
+      display: flex; flex-direction: column; gap: .55rem;
+    }
+    .project-title{
+      font-size: 1.15rem; margin: .2rem 0; line-height: 1.25;
+    }
+    .project-meta{
+      font-size: .9rem; color: var(--gris-claro);
+    }
+    .tags{
+      display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .2rem;
+    }
+    .tag{
+      font-size: .8rem; padding: .25rem .5rem; border-radius: .5rem;
+      background: rgba(255,255,255,.06); color: #eaeaea;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .project-actions{
+      margin-top: .6rem;
+      display: flex; gap: .6rem; flex-wrap: wrap;
+    }
+    .btn{
+      display: inline-block; padding: .7rem 1rem; border-radius: .6rem;
+      text-decoration: none; font-weight: 600; text-align: center;
+      transition: transform .12s ease, background .2s ease, color .2s ease, border-color .2s ease;
+      border: 1px solid transparent;
+    }
+    .btn-primary{ background: var(--naranja); color:#111; }
+    .btn-primary:hover{ transform: translateY(-1px); background: #ff7f1a; }
+    .btn-ghost{ background: transparent; color:#eaeaea; border-color: rgba(255,255,255,.22); }
+    .btn-ghost:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); }
+
+    /* CTA inferior */
+    .portfolio-cta{
+      margin-top: 2rem; padding: 1.2rem; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.12);
+      display: flex; flex-wrap: wrap; align-items: center; gap: .8rem;
+      justify-content: space-between;
+    }
+    .portfolio-cta p{ margin: 0; color: var(--gris-claro); }
+    .portfolio-cta .btn-primary{ min-width: 200px; }
+  </style>
+</head>
+<body>
+
+  <main class="portfolio" role="main">
+    <header class="portfolio-hero">
+      <h1>Portfolio</h1>
+      <p>Una selección de proyectos: landings de alta conversión, sitios corporativos, e-commerce y campañas de marketing. Si querés ver más ejemplos específicos de tu rubro, escribime.</p>
+    </header>
+
+    <section class="projects-grid" aria-label="Listado de proyectos">
+      <!-- Proyecto 1 -->
+      <article class="project-card">
+        <div class="project-media">
+          <img src="proyecto-1.jpg" alt="Proyecto 1 — Landing de campaña" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Landing de campaña — Marca X</h3>
+          <div class="project-meta">Optimizada para alto CTR y conversión</div>
+          <div class="tags">
+            <span class="tag">Landing</span>
+            <span class="tag">GA4</span>
+            <span class="tag">SEO On-Page</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://ejemplo.com" target="_blank" rel="noopener">Ver online</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Caso / Ficha</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project-card">
+        <div class="project-media">
+          <img src="proyecto-2.jpg" alt="Proyecto 2 — Sitio corporativo" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Sitio corporativo a medida — Empresa Y</h3>
+          <div class="project-meta">Enfoque en credibilidad y performance</div>
+          <div class="tags">
+            <span class="tag">Corporativo</span><span class="tag">Responsive</span><span class="tag">Velocidad</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://ejemplo.com" target="_blank" rel="noopener">Ver online</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Caso / Ficha</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="project-card">
+        <div class="project-media">
+          <img src="proyecto-3.jpg" alt="Proyecto 3 — Tienda online" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">E-commerce — Marca Z</h3>
+          <div class="project-meta">Checkout optimizado, medios de pago y envíos</div>
+          <div class="tags">
+            <span class="tag">E-commerce</span><span class="tag">Checkout</span><span class="
