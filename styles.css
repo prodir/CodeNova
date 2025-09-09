@@ -184,6 +184,7 @@ font-family: "Aldrich", sans-serif;
   border: none;
   border-radius: 8px;
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
   box-shadow: 0 5px 20px rgba(255, 106, 0, 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -191,6 +192,7 @@ font-family: "Aldrich", sans-serif;
 
 .cta-btn:hover {
   transform: scale(1.08);
+  color: var(--blanco);
   box-shadow: 0 10px 30px rgba(255, 106, 0, 0.5);
 }
 .hero-logo-signature {
@@ -431,7 +433,7 @@ font-family: "Aldrich", sans-serif;
 
 
 /* SECCION PROCESOS DE TRABAJO */
-/*PRUEBASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
 
 /*ANIMACIONES GENERALES*/
 .fade-section {
@@ -615,6 +617,8 @@ font-family: "Aldrich", sans-serif;
     background: #ababab;
     color: #fff;
 }
+
+
 /* SECCION QUE NECESITAS SABER ANTES DE EMPEZAR */
 
 .edu-cards {
@@ -1029,8 +1033,9 @@ font-family: "Aldrich", sans-serif;
 }
 
 
+
 .footer-logo img {
-  max-height: 280px;
+  max-height: 90px;
   object-fit: contain;
 }
 
@@ -1528,17 +1533,20 @@ font-family: "Aldrich", sans-serif;
   }
   .whatsapp-float img{ width: 60px; height: 60px; }
   
-  .edu-cards{
-    padding: 3rem 5vw;      /* menos padding lateral */
-  }
+
+  /* SECCION GRILLA GUIA CON IMAGENES EN MINIATURA */
 
   /* SECCION SLIDES MOBILE*/
+  
+   .edu-cards{
+    padding: .1rem 1vw;      /* menos padding lateral */
+  }
   .edu-card.big{
     display: flex;
     flex-direction: column;   /* CTA pasa abajo */
     align-items: flex-start;
     padding: 1rem 0.95rem 1.1rem;
-    height: auto;             /* ← quita 20rem de desktop */
+    min-height: 80vh;             /* ← quita 20rem de desktop */
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0,0,0,.35);
   }
@@ -1550,6 +1558,12 @@ font-family: "Aldrich", sans-serif;
     align-items: center;
     gap: .75rem;
     width: 100%;
+  }
+
+  .edu-icon img {
+    width: 100px;
+    padding: 0;
+    margin: auto;
   }
 
   /* 3) Tipografías más legibles en chico */
@@ -1651,6 +1665,50 @@ font-family: "Aldrich", sans-serif;
     display: none !important;
   }
 
+  /* GUIA COMO CONSTRUIMOS TU WEB */
+
+  
+.item .content{
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+
+.content .name{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    text-shadow: 0 2px 6px rgba(0,0,0,.6);
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    text-shadow: 0 2px 6px rgba(0,0,0,.6);
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+
 
   /*FOOTER MOBILE*/
   .site-footer .footer-content{
@@ -1681,7 +1739,7 @@ font-family: "Aldrich", sans-serif;
 
   /* Links */
   .site-footer .footer-links h3{ margin-top: .2rem; }
-  .site-footer .footer-links a{ font-size: .98rem; }
+  .site-footer .footer-links a { font-size: .98rem; }
 
   /* Mapa responsivo (si lo usás en mobile) */
   .site-footer .footer-map{
