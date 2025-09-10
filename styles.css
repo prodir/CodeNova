@@ -204,7 +204,7 @@ font-family: "Aldrich", sans-serif;
 }
 
 .hero-logo-signature img {
-  height: 20rem; /* ajustás según lo quieras de grande */
+  height: 5rem; /* ajustás según lo quieras de grande */
   width: auto;
   opacity: 1; /* si querés más sutil bajás a 0.8 o 0.6 */
   display: block;
@@ -819,12 +819,13 @@ font-family: "Aldrich", sans-serif;
 /* =========================== */
 .paquetes {
   background: var(--negro);
-  padding: 6rem 5vw;
+  padding: 4rem 2vw;
   color: var(--card-bg);
+  max-width: 2440px;
 }
 
 .paquetes-intro {
-  max-width: 1000px;
+  max-width: 2440px;
   margin: 0 auto 4rem;
   text-align: left;
   font-family: "Inter", sans-serif;
@@ -834,22 +835,20 @@ font-family: "Aldrich", sans-serif;
   font-size: 2.8rem;
   margin-bottom: 1rem;
   font-family: "Aldrich", sans-serif;
-  
   color: var(--accent);
 }
 .paquetes-intro p {
   font-size: 1.1rem;
   color: var(--gris-claro);
   line-height: 1.6;
-  
   max-width: 800px;
 }
 
 /* GRID DE CARDS */
 .paquetes-grid{
   display:grid;
-  grid-template-columns:repeat(4, minmax(0,1fr));
-  gap:2rem;
+  grid-template-columns:repeat(5, minmax(0,2fr));
+  gap:1.1rem;
   align-items:stretch;             /* estira todas las tarjetas */
 }
 
@@ -1071,6 +1070,8 @@ font-family: "Aldrich", sans-serif;
   font-size: 1.6rem;
   margin-bottom: 1rem;
   color: var(--naranja);
+  
+  font-family: "Aldrich", sans-serif;
 }
 .footer-links ul {
   list-style: none;
@@ -1261,6 +1262,8 @@ font-family: "Aldrich", sans-serif;
   box-shadow: 0 0 0 3px rgba(255,166,0,.25);
   border-radius: 10px;
 }
+
+
 @media (max-width: 1600px){
     
 .hero-text {
@@ -1313,12 +1316,22 @@ font-family: "Aldrich", sans-serif;
 }
 
 .hero-logo-signature img {
-  height: 17rem; /* ajustás según lo quieras de grande */
+  height: 5rem; /* ajustás según lo quieras de grande */
   width: auto;
   opacity: 1; /* si querés más sutil bajás a 0.8 o 0.6 */
   display: block;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
   transition: opacity .3s, transform .2s;
+}
+
+/* SECCION PAQUETES 1600px */
+
+/* GRID DE CARDS */
+.paquetes-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,2fr));
+  gap:1.1rem;
+  align-items:stretch;             /* estira todas las tarjetas */
 }
 }
 
@@ -1350,7 +1363,7 @@ font-family: "Aldrich", sans-serif;
     font-size: 1.1rem;
   }
   .hero-logo-signature img{
-    height: 15rem;
+    height: 4rem;
   }
 
   /* Tipografía un toque más contenida */
@@ -1467,12 +1480,25 @@ font-family: "Aldrich", sans-serif;
   .whatsapp-float img{ width: 80px; }
 
   /* SECCION PAQUETES TABLET */
-    .paquetes{ padding: 4rem 6vw; }
-  .paquetes-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 1.5rem;
+/* SECCION PAQUETES 1024px */
+  #paquetes.fade-section { 
+    opacity: 1 !important; 
+    filter: none !important; 
+    transform: none !important; 
   }
-    .footer-content{
+/* GRID DE CARDS */
+.paquetes-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,2fr));
+  gap:1rem;
+  align-items:stretch;             /* estira todas las tarjetas */
+}
+.paquete-card {
+  max-height: 100%;
+
+}
+    
+.footer-content{
     grid-template-columns: 1fr 1fr;   /* logo/contacto | links */
     gap: 1.5rem;
   }
@@ -1527,20 +1553,12 @@ font-family: "Aldrich", sans-serif;
     padding: 1rem 2rem;
   }
 
-  .hero-logo-signature {
-    bottom: 2rem; /* sube un poquito el logo */
-  }
-
-  .hero-logo-signature img {
-    height: 7rem; /* más chico en mobile */
-  }
-    
   .resaltado::after{ bottom: -.12em; height: 2px; } /* subrayado más fino */
 
 
   /* Logo firma: más chico y pegado al borde */
-  .hero-logo-signature{ right: 12px; bottom: 12px; }
-  .hero-logo-signature img{ height: 14rem; opacity: .9; }
+  .hero-logo-signature{ right: 12px; bottom: 4rem; }
+  .hero-logo-signature img{ height: 4rem; opacity: .9; }
 
   /* Vídeo: que siempre cubra y no recorte raro */
   .video-bg video{
@@ -1691,7 +1709,8 @@ font-family: "Aldrich", sans-serif;
   }
 
   /* SECCION PAQUETES MOBILE */
-  .paquetes{ padding: 3rem 5vw; }
+  
+  .paquetes{ padding: 1rem 2vw; }
 
   /* 1 sola columna: cada card ocupa todo el ancho */
   .paquetes-grid{
