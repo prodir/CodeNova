@@ -361,7 +361,7 @@
          playsinline
          preload="auto"
          poster="fallback.jpg"> <!-- opcional -->
-    <source src="fondomockup.mp4" type="video/mp4">   <!-- H.264 + AAC -->
+    <source src="tallermoreto.mp4" type="video/mp4">   <!-- H.264 + AAC -->
   </video>
 </div>
       
@@ -398,7 +398,7 @@
          playsinline
          preload="auto"
          poster="fallback.jpg"> <!-- opcional -->
-    <source src="fondomockup.mp4" type="video/mp4">   <!-- H.264 + AAC -->
+    <source src="conectads.mp4" type="video/mp4">   <!-- H.264 + AAC -->
   </video>
 </div>
       <div class="paquete-content">
@@ -432,7 +432,7 @@
          playsinline
          preload="auto"
          poster="fallback.jpg"> <!-- opcional -->
-    <source src="fondomockup.mp4" type="video/mp4">   <!-- H.264 + AAC -->
+    <source src="antiguedades.mp4" type="video/mp4">   <!-- H.264 + AAC -->
   </video>
 </div>
       <div class="paquete-content">
@@ -476,13 +476,13 @@
           </div>
 
           <ul class="paquete-features">
-            <li>Diagnóstico completo + plan de acción</li>
-            <li>Armado a medida (gaming, edición, oficina) con pruebas</li>
-            <li>Instalación limpia de Windows 10/11 (con licencia del cliente) + drivers</li>
+            <li>Diagnóstico completo</li>
+            <li>Armado a medida (gaming, edición, oficina)</li>
+            <li>Instalación limpia de Windows 10/11 + drivers</li>
             <li>Actualización de BIOS/firmware</li>
             <li>Limpieza interna y mantenimiento preventivo</li>
-            <li>Optimización de rendimiento (arranque, FPS, temperaturas)</li>
-            <li>Backup y recuperación de datos (según estado del disco)</li>
+            <li>Optimización de rendimiento</li>
+            <li>Backup y recuperación de datos</li>
             <li>Seguridad básica</li>
             <li>Soporte remoto o presencial</li>
             <li>Asesoría de upgrade y presupuesto transparente</li>
@@ -512,17 +512,15 @@
 
           <ul class="paquete-features">
             <li>Auditoría inicial y plan de acción</li>
-            <li>Set up de Google Ads (Search / Performance Max / Remarketing)</li>
+            <li>Set up de Google Ads</li>
             <li>Instalación de GA4 + Google Tag Manager y conversiones</li>
             <li>Investigación de palabras clave y segmentaciones</li>
-            <li>Creatividades y copies orientados a conversión</li>
-            <li>Optimización semanal y control de presupuesto</li>
-            <li>Reporte mensual claro (KPI, aprendizajes y próximos pasos)</li>
-            <li>Tablero en Data Studio/Looker (acceso 24/7)</li>
-            <li>SEO on-page básico (títulos, metadescripciones, indexación)</li>
+            <li>Optimización semanal</li>
+            <li>Reporte mensual claro</li>
+            <li>Tablero en Data Studio/Looker</li>
+            <li>SEO on-page básico</li>
             <li>Mejora o creación de landing para campañas</li>
             <li>Integración con WhatsApp, formularios y correo</li>
-            <li>Tests A/B en anuncios y landings</li>
           </ul>
         </div>
       </article>
@@ -690,7 +688,7 @@
       </footer>
 
       <!-- WhatsApp flotante con icono PNG -->
-      <a href="https://wa.me/5491124677663" class="whatsapp-float" target="_blank" aria-label="Escribinos por WhatsApp">
+      <a href="https://wa.me/5491124677663" class="whatsapp-float" target="_blank" aria-label="Escribinos por WhatsApp" data-tooltip="Hablanos aquí!">
         <img src="whatsapp.png" alt="WhatsApp">
       </a>
 
@@ -973,5 +971,79 @@
         }, {passive:true});
       });
     </script>
+
+    <!-- Script "Ver mas" PAQUETES MOBILE -->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const MOBILE_Q = window.matchMedia('(max-width: 680px)');
+
+  function setupAccordions() {
+    // Limpiar instancias previas (por si cambiaste tamaño de ventana)
+    document.querySelectorAll('.paquete-toggle').forEach(btn => btn.remove());
+    document.querySelectorAll('.paquete-features').forEach(ul => {
+      ul.style.maxHeight = ''; // reset inline
+      ul.classList.remove('is-open', 'is-collapsible');
+      ul.removeAttribute('id');
+      ul.removeAttribute('aria-hidden');
+    });
+
+    if (!MOBILE_Q.matches) return; // Solo en móviles
+
+    // Crear un botón para cada lista de features
+    document.querySelectorAll('.paquete-content').forEach((content, idx) => {
+      const list = content.querySelector('.paquete-features');
+      if (!list) return;
+
+      // Accesibilidad
+      const uid = `features-${idx + 1}`;
+      list.id = uid;
+      list.classList.add('is-collapsible');
+      list.setAttribute('aria-hidden', 'true');
+
+      // Botón
+      const btn = document.createElement('button');
+      btn.className = 'paquete-toggle';
+      btn.type = 'button';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', uid);
+      btn.innerHTML = `
+        <span class="label-default">Ver especificaciones</span>
+        <span class="label-open">Ocultar especificaciones</span>
+        <span class="chevron" aria-hidden="true"></span>
+      `;
+
+      // Insertar el botón justo antes de la lista
+      content.insertBefore(btn, list);
+
+      // Toggle
+      btn.addEventListener('click', () => {
+        const isOpen = list.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        list.setAttribute('aria-hidden', String(!isOpen));
+        // Animación con altura dinámica
+        if (isOpen) {
+          list.style.maxHeight = list.scrollHeight + 'px';
+        } else {
+          list.style.maxHeight = list.scrollHeight + 'px'; // primer paso para animar
+          // forzar reflow y luego cerrar
+          requestAnimationFrame(() => { list.style.maxHeight = '0px'; });
+        }
+      });
+
+      // Estado inicial (cerrado)
+      list.style.maxHeight = '0px';
+    });
+  }
+
+  setupAccordions();
+  // Reconfigurar si cambia el ancho por rotación o redimensionado
+  window.addEventListener('resize', () => {
+    // usando rAF para no spamear
+    window.cancelAnimationFrame(window.__pkgRAF);
+    window.__pkgRAF = requestAnimationFrame(setupAccordions);
+  });
+});
+</script>
+
   </body>
 </html>

@@ -1101,45 +1101,103 @@ font-family: "Aldrich", sans-serif;
   padding: 1rem 0;
   font-size: 0.9rem;
 }
-
+/* ==== WhatsApp Float (limpio) ==== */
 .whatsapp-float {
   position: fixed;
-  bottom: 50px; right: 50px;
-  width: 60px; height: 60px;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,.3);
-  z-index: 999;
-  display: flex;                 /* centra el PNG */
-  align-items: center;
-  justify-content: center;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 14px rgba(0,0,0,.4);
-}
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
   right: 20px;
+  bottom: 20px;
+
   width: 60px;
   height: 60px;
   border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
   z-index: 999;
-  animation: bounce 2s infinite;
+
+  /* animación hover */
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+
+  /* por si tenías la animación bounce, mejor activarla con una clase aparte */
+  /* animation: bounce 2s infinite; */
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
+/* Icono PNG: que no se desborde del botón */
 .whatsapp-float img {
-  width: 80px; height: 80px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
+  pointer-events: none; /* que el click siempre sea del <a> */
 }
 
+/* Hover/focus: agranda un toque y resalta */
+@media (hover: hover) {
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+    filter: saturate(1.05);
+    box-shadow: 0 10px 22px rgba(0,0,0,.45);
+  }
+}
+/* Accesible: teclado/mobile tap (focus visible) */
+.whatsapp-float:focus-visible {
+  outline: 2px solid rgba(37, 211, 102, .5);
+  outline-offset: 4px;
+  transform: scale(1.06);
+}
+
+/* === Cartel/Pill con ::after (texto personalizable por data-tooltip) === */
+.whatsapp-float::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: calc(100% + 10px);            /* aparece a la izquierda del botón */
+  bottom: 50%;
+  transform: translateY(50%) translateX(6px) scale(.98);
+  transform-origin: right center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  padding: .6rem .8rem;
+  border-radius: 12px;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(0,0,0,.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+/* Flechita del cartel */
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 50%;
+  transform: translateY(50%);
+  border: 7px solid transparent;
+  border-right-color: #111;
+
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+
+/* Mostrar cartel en hover (desktop) y focus (teclado/touch) */
+@media (hover: hover) {
+  .whatsapp-float:hover::after,
+  .whatsapp-float:hover::before {
+    opacity: 1;
+    transform: translateY(50%) translateX(0) scale(1);
+  }
+}
+.whatsapp-float:focus-visible::after,
+.whatsapp-float:focus-visible::before {
+  opacity: 1;
+  transform: translateY(50%) translateX(0) scale(1);
+}
 /* =============================================== */
 /* FAQS con look & feel de la sección 2 (links)   */
 /* =============================================== */
@@ -1768,8 +1826,9 @@ font-family: "Aldrich", sans-serif;
     display: none !important;
   }
 
-  /* GUIA COMO CONSTRUIMOS TU WEB */
 
+
+  /* GUIA COMO CONSTRUIMOS TU WEB */
   
 .item .content{
     position: absolute;
@@ -1864,4 +1923,63 @@ font-family: "Aldrich", sans-serif;
     font-size: .9rem;
     padding-top: 1rem;
   }
+
+  /* Botón toggle dentro de cada card */
+.paquete-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  width: 100%;
+  margin-top: .75rem;
+  padding: .8rem 1rem;
+
+  font-weight: 700;
+  font-size: .98rem;
+  border-radius: .6rem;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+
+  transition: background .2s ease, border-color .2s ease, transform .15s ease;
+}
+.paquete-toggle:active { transform: scale(.98); }
+.paquete-toggle:hover { background: rgba(255,255,255,0.12); }
+
+/* Etiquetas según estado (cerrado/abierto) */
+.paquete-toggle .label-open { display: none; }
+.paquete-features.is-open ~ .paquete-toggle .label-default { display: none; } /* (no aplica, el botón está antes) */
+
+/* Como el botón está antes, controlamos por [aria-expanded] */
+.paquete-toggle[aria-expanded="true"] .label-default { display: none; }
+.paquete-toggle[aria-expanded="true"] .label-open { display: inline; }
+
+/* Icono chevron */
+.paquete-toggle .chevron{
+  width: .9rem; height: .9rem; flex: 0 0 .9rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+.paquete-toggle[aria-expanded="true"] .chevron{ transform: rotate(-135deg); }
+
+/* Lista colapsable */
+.paquete-features.is-collapsible{
+  overflow: hidden;
+  transition: max-height .28s ease;
+  will-change: max-height;
+  margin-top: .4rem;
+  padding-left: 1rem; /* mantené tu identación */
+}
+
+/* Menos movimiento para usuarios con reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .paquete-features.is-collapsible { transition: none; }
+  .paquete-toggle { transition: none; }
+}
+
+  
 }
