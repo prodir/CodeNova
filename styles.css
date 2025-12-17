@@ -196,7 +196,11 @@ font-family: "Aldrich", sans-serif;
   pointer-events: none;
 }
 
-
+.line-keep{
+  display: inline-block;
+  white-space: nowrap;
+  transform-origin: left center; /* para escalar desde la izquierda */
+}
 
 .cta-btn {
   display: inline-block;
@@ -487,7 +491,7 @@ font-family: "Aldrich", sans-serif;
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 14px;
   box-shadow: 0 10px 24px rgba(0,0,0,.35);
-  padding: .6rem .9rem;
+  padding: 1.6rem 1.9rem;
   z-index: 5;
   font-family: aldrich;
   font-size: 1.2rem;
@@ -499,7 +503,7 @@ font-family: "Aldrich", sans-serif;
 }
 .hero-trust__list li{
   display: grid; gap: .1rem; justify-items: center; text-align: center;
-  color: #eaeaea;
+  color: #eaeaea; font-size: 1.4rem;
 }
 .hero-trust__list strong{
   color: var(--accent, #E8CA84);
@@ -1702,6 +1706,22 @@ font-family: "Aldrich", sans-serif;
   .hero-text .resaltado{
     font-size: 3.5rem;
   }
+  /* --- En mobile: poner "innovación" en la línea de abajo --- */
+.line-keep{ 
+  white-space: normal;           /* ya no forzamos nowrap */
+}
+
+.line-keep .type-wrap{
+  display: grid;                 /* mantiene el sizer + texto superpuestos */
+  margin-left: 0;                /* por si antes le dimos .25ch */
+  margin-top: .18em;             /* un respiro entre “la” y “innovación” */
+}
+
+.line-keep .resaltado{ 
+  display: inline-block;         /* para que el subrayado mida el texto */
+}
+/* si usás el subrayado con ::after */
+.line-keep .resaltado::after{ bottom: -.12em; height: 2px; }
 
   /* badge en flujo normal, debajo del CTA y alineado a la izquierda */
   .hero-trust{
