@@ -29,7 +29,7 @@
     .portfolio-hero h1{
       font-family: "Aldrich", sans-serif;
       font-size: clamp(1.8rem, 5vw, 2.6rem);
-      color: var(--accent);
+      color: var(--naranja);
       margin: 0 0 .6rem;
     }
     .portfolio-hero p{
@@ -126,6 +126,7 @@
     .portfolio-cta .btn-primary{ min-width: 200px; }
   </style>
 </head>
+
 <body>
 
   <main class="portfolio" role="main">
@@ -137,11 +138,20 @@
     <section class="projects-grid" aria-label="Listado de proyectos">
       <!-- Proyecto 1 -->
       <article class="project-card">
-        <div class="project-media">
-          <img src="proyecto-1.jpg" alt="Proyecto 1 — Landing de campaña" loading="lazy">
-        </div>
+          <div class="project-media">
+    <video class="project-video"
+           autoplay
+           muted
+           loop
+           playsinline
+           preload="metadata"
+           poster="tallermoreto.jpg">
+      <source src="tallermoreto.mp4" type="video/mp4">
+    </video>
+    <noscript><img src="tallermoreto.jpg" alt="Proyecto 1 — Landing de campaña"></noscript>
+  </div>
         <div class="project-body">
-          <h3 class="project-title">Landing de campaña — Marca X</h3>
+          <h3 class="project-title">Landing de campaña — Taller Moreto</h3>
           <div class="project-meta">Optimizada para alto CTR y conversión</div>
           <div class="tags">
             <span class="tag">Landing</span>
@@ -149,37 +159,51 @@
             <span class="tag">SEO On-Page</span>
           </div>
           <div class="project-actions">
-            <a class="btn btn-primary" href="https://ejemplo.com" target="_blank" rel="noopener">Ver online</a>
-            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Caso / Ficha</a>
+            <a class="btn btn-primary" href="https://tallermoreto.com.ar" target="_blank" rel="noopener">Ver online</a>
           </div>
         </div>
       </article>
 
       <!-- Proyecto 2 -->
       <article class="project-card">
-        <div class="project-media">
-          <img src="proyecto-2.jpg" alt="Proyecto 2 — Sitio corporativo" loading="lazy">
-        </div>
+          <div class="project-media">
+    <video class="project-video"
+           autoplay muted loop playsinline preload="metadata"
+           poster="conectads.jpg">
+      <source src="conectads.mp4" type="video/mp4">
+    </video>
+    <noscript><img src="conectads.jpg" alt="Proyecto 2 — Sitio corporativo"></noscript>
+  </div>
         <div class="project-body">
-          <h3 class="project-title">Sitio corporativo a medida — Empresa Y</h3>
+          <h3 class="project-title">Sitio corporativo a medida — ConectAds</h3>
           <div class="project-meta">Enfoque en credibilidad y performance</div>
           <div class="tags">
             <span class="tag">Corporativo</span><span class="tag">Responsive</span><span class="tag">Velocidad</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-primary" href="https://ejemplo.com" target="_blank" rel="noopener">Ver online</a>
-            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Caso / Ficha</a>
           </div>
         </div>
       </article>
 
       <!-- Proyecto 3 -->
       <article class="project-card">
-        <div class="project-media">
-          <img src="proyecto-3.jpg" alt="Proyecto 3 — Tienda online" loading="lazy">
-        </div>
+          <div class="project-media">
+    <video class="project-video"
+           autoplay muted loop playsinline preload="metadata"
+           poster="antiguedades.jpg">
+      <source src="antiguedades.mp4" type="video/mp4">
+    </video>
+    <noscript><img src="antiguedades.jpg" alt="Proyecto 3 — Tienda online"></noscript>
+  </div>
         <div class="project-body">
-          <h3 class="project-title">E-commerce — Marca Z</h3>
+          <h3 class="project-title">E-commerce — Antiguedades Cott</h3>
           <div class="project-meta">Checkout optimizado, medios de pago y envíos</div>
           <div class="tags">
-            <span class="tag">E-commerce</span><span class="tag">Checkout</span><span class="
+            <span class="tag">Corporativo</span><span class="tag">Responsive</span><span class="tag">Velocidad</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://antiguedadescott.com.ar/" target="_blank" rel="noopener">Ver online</a>
+          </div>
+        </div>
+      </article>
